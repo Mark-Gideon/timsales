@@ -11,7 +11,7 @@ export default function Manufacturing() {
         eyebrow="Manufacturing"
         title={<>1.0 PRODUCTION LINES</>}
         description="The company has several production lines"
-        image="/assets/images/sawmill-line.jpg"
+        image="/assets/images/banners/manufacturing.jpg"
       />
 
       <section className="bg-warm-50 section-padding py-20 lg:py-32">

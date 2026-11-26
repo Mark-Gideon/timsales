@@ -22,7 +22,7 @@ export const products: Product[] = [
     overview:
       'Timsales plywood is manufactured through a controlled process of layering veneers with alternating grain directions, bonded under heat and pressure to produce dimensionally stable panels. Our plywood is engineered for strength, consistency and workability — suitable for structural, decorative and industrial uses.',
     image: '/assets/images/plywood.jpg',
-    detailImage: '/assets/images/marineplaywood.jpeg',
+    detailImage: '/assets/images/banners/plywood.jpg',
     applications: ['Construction', 'Furniture', 'Joinery', 'Interior Fit-Outs', 'Formwork', 'Packaging'],
     gallery: [
       { src: '/assets/images/products/plywood/01.jpg' },
@@ -40,7 +40,7 @@ export const products: Product[] = [
     overview:
       'Timsales fibreboards are manufactured from wood fibres consolidated under controlled conditions to produce uniform, dense panels. These boards offer a smooth surface, consistent density and reliable performance for furniture, interior fit-outs and general-purpose applications.',
     image: '/assets/images/FIBREBOARDS.jpg',
-    detailImage: '/assets/images/FIBREBOARDS.jpg',
+    detailImage: '/assets/images/banners/fibreboards.jpg',
     applications: ['Furniture', 'Interior Fit-Outs', 'Joinery', 'Doors', 'Shelving', 'Display Systems'],
     gallery: [
       { src: '/assets/images/products/fibreboards/01.jpg', caption: 'Hardboards' },
@@ -59,7 +59,7 @@ export const products: Product[] = [
     overview:
       'Timsales chipboards are produced from waste recovered from the sawmill and plywood lines. Boards are available in a range of thicknesses and can be laminated in customer-selected colours with suede or matt finishes.',
     image: '/assets/images/chipboard.jpg',
-    detailImage: '/assets/images/chipboardline.jpg',
+    detailImage: '/assets/images/banners/chipboards.jpg',
     applications: ['Furniture', 'Interior Fit-Outs', 'Ceiling Boards', 'Joinery', 'Shelving', 'Commercial Projects'],
     gallery: [
       { src: '/assets/images/products/chipboards/01.jpg', caption: 'Ceiling Board' },
@@ -101,8 +101,8 @@ export const products: Product[] = [
       'Reliable, durable door solutions for residential, commercial and institutional applications.',
     overview:
       'Timsales doors are manufactured with a solid core and quality veneer or laminate faces, engineered for durability, dimensional stability and consistent performance. They are designed for residential, commercial and institutional applications where reliability and appearance matter.',
-    image: '/assets/images/FLUSHDOOR1.jpg',
-    detailImage: '/assets/images/FLUSHDOOR2.jpg',
+    image: '/assets/images/door-full.jpg',
+    detailImage: '/assets/images/banners/doors.jpg',
     applications: ['Doors', 'Residential', 'Commercial', 'Institutional', 'Interior Fit-Outs', 'Hospitality'],
     gallery: [
       { src: '/assets/images/products/doors/01.jpg', caption: 'Flush Door' },
@@ -125,7 +125,7 @@ export const products: Product[] = [
     overview:
       'Timsales timber is sourced, processed and graded for quality and consistency. Our sawmilling operations produce a range of timber dimensions suitable for construction, furniture, joinery and general woodworking — each piece processed to meet professional standards.',
     image: '/assets/images/products/timber/card.jpg',
-    detailImage: '/assets/images/products/timber/04.jpg',
+    detailImage: '/assets/images/banners/timber.jpg',
     applications: ['Construction', 'Furniture', 'Joinery', 'Roofing', 'Flooring', 'General Woodworking'],
     gallery: [
       { src: '/assets/images/products/timber/01.jpg', caption: 'Kiln Dried Timber' },
@@ -147,7 +147,7 @@ export const products: Product[] = [
     overview:
       'Timsales transmission poles are dried and treated through a controlled vacuum-pressure impregnation process to improve durability for utility infrastructure. The treatment line uses preservative systems suited to long-term outdoor service.',
     image: '/assets/images/products/transmission-poles/01.jpg',
-    detailImage: '/assets/images/products/transmission-poles/02.jpg',
+    detailImage: '/assets/images/banners/transmission-poles.jpg',
     applications: ['Power Distribution', 'Utility Infrastructure', 'Outdoor Construction', 'Fencing'],
     gallery: [
       { src: '/assets/images/products/transmission-poles/01.jpg', caption: 'Transmission Poles' },
@@ -168,7 +168,7 @@ export const products: Product[] = [
     overview:
       'We provide quality fabricated building structures that are affordable, modern, and quick to install. Our structures can be customized to suit different business needs, with practical designs, durable materials, and comfortable spaces.',
     image: '/assets/images/products/prefabricated-buildings/01.jpg',
-    detailImage: '/assets/images/products/prefabricated-buildings/02.jpg',
+    detailImage: '/assets/images/banners/prefabricated-buildings.jpg',
     applications: ['Residential Buildings', 'Site Offices', 'Commercial Spaces', 'Panelized Construction'],
     gallery: [
       { src: '/assets/images/products/prefabricated-buildings/01.jpg' },

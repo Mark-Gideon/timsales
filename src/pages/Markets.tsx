@@ -22,7 +22,7 @@ export default function Markets() {
         eyebrow="Markets"
         title={<>Made in Kenya. Built for the Region.</>}
         description="Timsales products serve customers locally across Kenya and are also supplied to neighboring markets. Our manufacturing base positions us for both domestic supply and growing export opportunities."
-        image="/assets/images/products/markets/01.jpg"
+        image="/assets/images/banners/markets.jpg"
       />
 
       <section className="bg-warm-50 section-padding py-20 lg:py-32">

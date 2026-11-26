@@ -8,10 +8,10 @@ export default function IndustrialFacility() {
         <img
           src="/assets/images/sawmill-line.jpg"
           alt="Industrial wood workshop with table saw and lumber stacks"
-          className="w-full h-full object-cover opacity-55"
+          className="w-full h-full object-cover opacity-90"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/80 via-charcoal-900/45 to-charcoal-900/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/70 via-charcoal-900/30 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-2xl">

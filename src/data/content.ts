@@ -21,7 +21,7 @@ export const locations: Location[] = [
     role: 'Regional Office & Distribution',
     address: 'Enterprise Road, Industrial Area, Nairobi, Kenya',
     phones: ['0722 206 961', '0733 333 307', '0737 410 007'],
-    email: 'nairobi@timsales.com',
+    email: 'sales@timsales.com',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Timsales%20Nairobi%20Enterprise%20Road%20Industrial%20Area%2C%20Nairobi%2C%20Kenya',
   },
   {
@@ -99,7 +99,7 @@ export const manufacturingSteps: ManufacturingStep[] = [
     number: '05',
     title: 'SAWMILL LINE',
     description: 'Logs are sawn into lumber/timber for use in construction and making of other secondary products e.g. block board flush door, furniture etc. Latest state of the art woodmizers machines are used and this leads to more recovery and less wastage. Saw dust and barks are used in the thermal boiler for energy generation.',
-    image: '/assets/images/sawmill-line.jpg',
+    image: '/assets/images/products/timber/06.jpg',
   },
   {
     number: '06',
@@ -111,13 +111,13 @@ export const manufacturingSteps: ManufacturingStep[] = [
     number: '07',
     title: 'TRANSMISSION POLE TREATMENT LINE',
     description: 'Manufactures power transmission poles which are supplied to Kenya Power Limited Company. Raw poles are dried in steam heated kiln drier and then treated in vacuum pressure impregnating vessel for chemical impregnation. Copper Chrome arsenate and creosote oil chemicals are used.',
-    image: '/assets/images/cypress-quarter.jpeg',
+    image: '/assets/images/products/transmission-poles/02.jpg',
   },
   {
     number: '08',
     title: 'PREFABRICATED HOUSES PRODUCTION LINE',
     description: 'Sawn timber are dried in the drier the taken for molding to produce T&G with center groove. The materials are the assembled at the joinery section into panels of different parts of the house. The panels are joined on site to make a house.',
-    image: '/assets/images/timber-yard.jpg',
+    image: '/assets/images/products/prefabricated-buildings/01.jpg',
   },
 ];
 
@@ -150,7 +150,7 @@ export const applications: Application[] = [
   {
     title: 'Doors',
     description: 'Wood-based solutions for residential, commercial and institutional doors.',
-    image: '/assets/images/door-handle-clockset.jpeg',
+    image: '/assets/images/door-full.jpg',
     icon: 'DoorClosed',
   },
   {

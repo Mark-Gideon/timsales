@@ -85,7 +85,7 @@ export default function Contact() {
         eyebrow="Contact"
         title={<>Contact Us</>}
         description="Talk to the Timsales team about your next project, order or distribution requirement. Fill out the form below and our team will get back to you."
-        image="/assets/images/lorry.jpg"
+        image="/assets/images/banners/contact.jpg"
       />
 
       <section className="bg-warm-50 section-padding py-20 lg:py-28">

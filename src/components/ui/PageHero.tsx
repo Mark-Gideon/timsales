@@ -17,7 +17,7 @@ export default function PageHero({ eyebrow, title, description, image }: PageHer
           alt=""
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/70 to-forest-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-forest-950/90 via-forest-950/30 to-forest-950/5" />
       </div>
 
       <div className="relative z-10 section-padding w-full">

@@ -43,7 +43,7 @@ export default function ProductDetail() {
             alt={product.name}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/60 to-forest-950/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-forest-950/90 via-forest-950/25 to-transparent" />
         </div>
 
         <div className="relative z-10 section-padding w-full">

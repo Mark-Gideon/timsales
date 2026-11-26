@@ -25,7 +25,7 @@ export default function Sustainability() {
         eyebrow="Sustainability"
         title={<>4.0 FORESTRY</>}
         description="The company sources its raw materials from state forest managed by Kenya Forest Service upon payment of the stipulated royalty. Raw transmission poles are sourced from small and large holders’ farms and tea estates."
-        image="/assets/images/products/sustainability/01.jpg"
+        image="/assets/images/sustainability.jpg"
       />
 
       <section className="bg-warm-50 section-padding py-20 lg:py-32">

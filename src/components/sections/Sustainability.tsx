@@ -6,13 +6,13 @@ import Reveal from '@/components/ui/Reveal';
 export default function Sustainability() {
   return (
     <section className="bg-forest-900 section-padding py-20 lg:py-32 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-45">
+      <div className="absolute top-0 right-0 w-1/2 h-full opacity-80">
         <img
           src="/assets/images/Pinus-KFS.jpg"
           alt="Peaceful forest with sunlight filtering through tall pine trees"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-forest-900/75 via-forest-900/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-900/65 via-forest-900/15 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-2xl">
