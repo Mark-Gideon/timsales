@@ -40,7 +40,7 @@ export default function Contact() {
     return e;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const e_ = validate();
     if (Object.keys(e_).length > 0) {
@@ -49,13 +49,29 @@ export default function Contact() {
     }
     setErrors({});
     setStatus('submitting');
-    setTimeout(() => {
+
+    // Netlify Forms: posts to the hidden "contact" form declared in index.html.
+    // Submissions are emailed to Sales_elburgon@timsales.com via a Netlify form notification.
+    const data = new FormData(e.currentTarget);
+    const body = new URLSearchParams();
+    body.append('form-name', 'contact');
+    data.forEach((value, key) => body.set(key, String(value)));
+
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
+      });
+      if (!res.ok) throw new Error(`Form submission failed (${res.status})`);
       setStatus('success');
       setForm({
         fullName: '', company: '', email: '', phone: '', country: '',
         product: '', quantity: '', message: '',
       });
-    }, 1200);
+    } catch {
+      setStatus('error');
+    }
   };
 
   const handleChange = (field: string, value: string) => {
@@ -67,7 +83,7 @@ export default function Contact() {
     <>
       <PageHero
         eyebrow="Contact"
-        title={<>Request a Quote</>}
+        title={<>Contact Us</>}
         description="Talk to the Timsales team about your next project, order or distribution requirement. Fill out the form below and our team will get back to you."
         image="/assets/images/lorry.jpg"
       />
@@ -99,9 +115,14 @@ export default function Contact() {
               </Reveal>
             ) : (
               <Reveal delay={1}>
-                <form onSubmit={handleSubmit} className="mt-8 space-y-5" noValidate>
+                <form name="contact" method="POST" onSubmit={handleSubmit} className="mt-8 space-y-5" noValidate>
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden" aria-hidden="true">
+                    <label>Do not fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" /></label>
+                  </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <FormField
+                      name="fullName"
                       label="Full Name *"
                       value={form.fullName}
                       onChange={(v) => handleChange('fullName', v)}
@@ -109,6 +130,7 @@ export default function Contact() {
                       placeholder="Your name"
                     />
                     <FormField
+                      name="company"
                       label="Company"
                       value={form.company}
                       onChange={(v) => handleChange('company', v)}
@@ -117,6 +139,7 @@ export default function Contact() {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <FormField
+                      name="email"
                       label="Email *"
                       type="email"
                       value={form.email}
@@ -125,6 +148,7 @@ export default function Contact() {
                       placeholder="you@example.com"
                     />
                     <FormField
+                      name="phone"
                       label="Phone"
                       type="tel"
                       value={form.phone}
@@ -134,6 +158,7 @@ export default function Contact() {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <FormField
+                      name="country"
                       label="Country"
                       value={form.country}
                       onChange={(v) => handleChange('country', v)}
@@ -144,6 +169,7 @@ export default function Contact() {
                         Product Interested In
                       </label>
                       <select
+                        name="product"
                         value={form.product}
                         onChange={(e) => handleChange('product', e.target.value)}
                         className="w-full px-4 py-3 bg-white rounded-lg border border-charcoal-200 text-charcoal-700 focus:outline-none focus:ring-2 focus:ring-timber-400 focus:border-transparent transition-all"
@@ -157,6 +183,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <FormField
+                    name="quantity"
                     label="Quantity / Requirements"
                     value={form.quantity}
                     onChange={(v) => handleChange('quantity', v)}
@@ -167,6 +194,7 @@ export default function Contact() {
                       Message *
                     </label>
                     <textarea
+                      name="message"
                       value={form.message}
                       onChange={(e) => handleChange('message', e.target.value)}
                       rows={5}
@@ -190,6 +218,12 @@ export default function Contact() {
                     {status === 'submitting' ? 'Submitting...' : 'Submit Enquiry'}
                     <Send className="w-4 h-4" />
                   </button>
+                  {status === 'error' && (
+                    <p className="text-sm text-red-500 flex items-center gap-1.5">
+                      <AlertCircle className="w-4 h-4" />
+                      Sorry, your message could not be sent. Please try again or contact us directly using the details on this page.
+                    </p>
+                  )}
                 </form>
               </Reveal>
             )}
@@ -203,36 +237,32 @@ export default function Contact() {
                   <div className="flex items-start gap-3">
                     <Phone className="w-5 h-5 text-timber-400 mt-0.5 shrink-0" />
                     <div>
-                      <div className="text-warm-100/60 text-xs uppercase tracking-wider">Phone</div>
-                      <div className="text-white text-sm mt-0.5">0722 203 961 / 0733 333 307</div>
+                      <div className="text-warm-100/60 text-xs uppercase tracking-wider">Elburgon (Head Office)</div>
+                      <div className="text-white text-sm mt-0.5">{locations[0].phones.join(' / ')}</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Mail className="w-5 h-5 text-timber-400 mt-0.5 shrink-0" />
                     <div>
                       <div className="text-warm-100/60 text-xs uppercase tracking-wider">Email</div>
-                      <div className="text-white text-sm mt-0.5">info@timsales.com</div>
+                      <a href={`mailto:${locations[0].email}`} className="text-white text-sm mt-0.5 hover:text-timber-400 transition-colors break-all">
+                        {locations[0].email}
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-timber-400 mt-0.5 shrink-0" />
                     <div>
-                      <div className="text-warm-100/60 text-xs uppercase tracking-wider">Nairobi Office</div>
-                      <div className="text-white text-sm mt-0.5">Enterprise Road, Industrial Area, Nairobi, Kenya</div>
+                      <div className="text-warm-100/60 text-xs uppercase tracking-wider">Head Office</div>
+                      <div className="text-white text-sm mt-0.5">{locations[0].address}</div>
                     </div>
                   </div>
                 </div>
                 <div className="mt-6 pt-6 border-t border-white/10">
                   <p className="text-warm-100/50 text-xs leading-relaxed">
-                    Our Elburgon head office and Nairobi office serve customers across Kenya and international markets.
+                    Our Elburgon head office and regional offices in Nairobi, Kisumu, Mombasa and Nakuru serve customers across Kenya and international markets.
                   </p>
                 </div>
-                <img
-                  src="/assets/images/5577437979198775261.png"
-                  alt="Official Timsales contact details and company identity"
-                  className="mt-6 w-full rounded-lg bg-timber-400 object-contain aspect-[16/9]"
-                  loading="lazy"
-                />
               </div>
             </Reveal>
           </div>
@@ -264,13 +294,21 @@ export default function Contact() {
                 </div>
                 <div className="mt-4 space-y-2.5 text-sm">
                   <div className="text-charcoal-500 leading-relaxed">{loc.address}</div>
-                  <div className="flex items-center gap-2 text-charcoal-500">
-                    <Phone className="w-4 h-4 text-timber-500" />
-                    {loc.phone}
+                  <div className="flex items-start gap-2 text-charcoal-500">
+                    <Phone className="w-4 h-4 text-timber-500 mt-0.5 shrink-0" />
+                    <div className="flex flex-col">
+                      {loc.phones.map((ph) => (
+                        <a key={ph} href={`tel:${ph.replace(/\s/g, '')}`} className="hover:text-timber-600 transition-colors">
+                          {ph}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                   <div className="flex items-center gap-2 text-charcoal-500">
-                    <Mail className="w-4 h-4 text-timber-500" />
-                    {loc.email}
+                    <Mail className="w-4 h-4 text-timber-500 shrink-0" />
+                    <a href={`mailto:${loc.email}`} className="hover:text-timber-600 transition-colors break-all">
+                      {loc.email}
+                    </a>
                   </div>
                 </div>
                 <a
@@ -300,6 +338,7 @@ export default function Contact() {
 }
 
 function FormField({
+  name,
   label,
   value,
   onChange,
@@ -307,6 +346,7 @@ function FormField({
   placeholder,
   type = 'text',
 }: {
+  name: string;
   label: string;
   value: string;
   onChange: (v: string) => void;
@@ -319,6 +359,7 @@ function FormField({
       <label className="block text-sm font-semibold text-forest-900 mb-1.5">{label}</label>
       <input
         type={type}
+        name={name}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}

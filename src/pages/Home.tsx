@@ -9,7 +9,6 @@ import Markets from '@/components/sections/Markets';
 // import Projects from '@/components/sections/Projects';
 import WhyTimsales from '@/components/sections/WhyTimsales';
 import IndustrialFacility from '@/components/sections/IndustrialFacility';
-import CTABanner from '@/components/sections/CTABanner';
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
       {/* <Projects /> */}
       <WhyTimsales />
       <IndustrialFacility />
-      <CTABanner />
     </>
   );
 }

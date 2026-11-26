@@ -3,7 +3,20 @@ import { ArrowRight } from 'lucide-react';
 import PageHero from '@/components/ui/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
-import CTABanner from '@/components/sections/CTABanner';
+import ImageCarousel from '@/components/ui/ImageCarousel';
+
+const sustainabilityGallery = [
+  { src: '/assets/images/Pinus-KFS.jpg', caption: 'Pine plantation' },
+  { src: '/assets/images/KeringetFarm.jpg', caption: 'Keringet Farm' },
+  { src: '/assets/images/treePlantation-privatefarms.jpg', caption: 'Private tree farms' },
+  { src: '/assets/images/products/sustainability/02.jpg' },
+  { src: '/assets/images/products/sustainability/03.jpg' },
+  { src: '/assets/images/products/sustainability/04.jpg' },
+  { src: '/assets/images/products/sustainability/05.jpg' },
+  { src: '/assets/images/products/sustainability/06.jpg' },
+  { src: '/assets/images/products/sustainability/07.jpg' },
+  { src: '/assets/images/products/sustainability/08.jpg' },
+];
 
 export default function Sustainability() {
   return (
@@ -12,7 +25,7 @@ export default function Sustainability() {
         eyebrow="Sustainability"
         title={<>4.0 FORESTRY</>}
         description="The company sources its raw materials from state forest managed by Kenya Forest Service upon payment of the stipulated royalty. Raw transmission poles are sourced from small and large holders’ farms and tea estates."
-        image="/assets/images/Pinus-KFS.jpg"
+        image="/assets/images/products/sustainability/01.jpg"
       />
 
       <section className="bg-warm-50 section-padding py-20 lg:py-32">
@@ -20,8 +33,8 @@ export default function Sustainability() {
           <Reveal>
             <div className="image-zoom rounded-2xl overflow-hidden shadow-2xl shadow-forest-950/20 aspect-[4/3]">
               <img
-                src="/assets/images/treePlantation-privatefarms.jpg"
-                alt="Evergreen forest with young pine trees"
+                src="/assets/images/environmental-concern.jpg"
+                alt="Timsales environmental conservation"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -51,6 +64,27 @@ export default function Sustainability() {
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-forest-900 section-padding py-20 lg:py-28 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid opacity-30" />
+        <div className="relative z-10">
+          <SectionHeading
+            eyebrow="In Pictures"
+            title={<>Sustainable Forestry in Action</>}
+            description="From our plantations and private tree farms to the pole yards and sawmill, see how Timsales manages forest resources responsibly."
+            light
+          />
+          <Reveal delay={2}>
+            <ImageCarousel
+              className="mt-12"
+              images={sustainabilityGallery}
+              slideClassName="w-[85%] sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]"
+              aspectClassName="aspect-[4/3]"
+              autoPlayMs={3500}
+            />
+          </Reveal>
         </div>
       </section>
 
@@ -86,8 +120,6 @@ export default function Sustainability() {
           </div>
         </Reveal>
       </section>
-
-      <CTABanner />
     </>
   );
 }

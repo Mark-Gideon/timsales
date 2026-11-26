@@ -2,7 +2,6 @@ import PageHero from '@/components/ui/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 import IndustrialFacility from '@/components/sections/IndustrialFacility';
-import CTABanner from '@/components/sections/CTABanner';
 import { manufacturingSteps } from '@/data/content';
 
 export default function Manufacturing() {
@@ -53,7 +52,6 @@ export default function Manufacturing() {
       </section>
 
       <IndustrialFacility />
-      <CTABanner />
     </>
   );
 }

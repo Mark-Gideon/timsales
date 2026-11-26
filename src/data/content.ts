@@ -2,59 +2,51 @@ export interface Location {
   name: string;
   role: string;
   address: string;
-  phone: string;
+  phones: string[];
   email: string;
   mapsUrl: string;
 }
 
 export const locations: Location[] = [
   {
-    name: 'Head Office',
-    role: 'Corporate Headquarters',
+    name: 'Timsales Elburgon',
+    role: 'Head Office & Manufacturing Facility',
     address: 'P.O. Box 12-20102, Elburgon, Kenya',
-    phone: '0722 203 919 / 0723 945 279',
-    email: 'info@timsales.com',
+    phones: ['0722 205 919', '0723 945 279', '0733 123 200', '0733 410 009'],
+    email: 'Sales_elburgon@timsales.com',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Timsales%20Elburgon%2C%20Molo%20Road%2C%20Elburgon%2C%20Kenya',
   },
   {
-    name: 'Elburgon',
-    role: 'Manufacturing Facility',
-    address: 'P.O. Box 12-20102, Elburgon, Kenya',
-    phone: '0722 203 919 / 0723 945 279',
-    email: 'info@timsales.com',
-    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Timsales%20Elburgon%2C%20Molo%20Road%2C%20Elburgon%2C%20Kenya',
-  },
-  {
-    name: 'Nairobi',
+    name: 'Timsales Nairobi',
     role: 'Regional Office & Distribution',
     address: 'Enterprise Road, Industrial Area, Nairobi, Kenya',
-    phone: '0722 203 961 / 0733 333 307',
-    email: 'info@timsales.com',
+    phones: ['0722 206 961', '0733 333 307', '0737 410 007'],
+    email: 'nairobi@timsales.com',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Timsales%20Nairobi%20Enterprise%20Road%20Industrial%20Area%2C%20Nairobi%2C%20Kenya',
   },
   {
-    name: 'Nakuru',
-    role: 'Regional Office & Distribution',
-    address: 'Nakuru, Kenya',
-    phone: '(051) 2214742',
-    email: 'info@timsales.com',
-    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Timsales%20Nakuru%2C%20Kenya',
-  },
-  {
-    name: 'Kisumu',
+    name: 'Timsales Kisumu',
     role: 'Regional Office & Distribution',
     address: 'Kisumu, Kenya',
-    phone: '(057) 2023996',
-    email: 'info@timsales.com',
+    phones: ['0202 129 303'],
+    email: 'kisumu@timsales.com',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Timsales%20Kisumu%2C%20Kenya',
   },
   {
-    name: 'Mombasa',
+    name: 'Timsales Mombasa',
     role: 'Regional Office & Distribution',
     address: 'Mombasa, Kenya',
-    phone: '(041) 2315754',
-    email: 'info@timsales.com',
+    phones: ['0777 033 455', '0110 009 591'],
+    email: 'mombasa@timsales.com',
     mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Timsales%20Mombasa%2C%20Kenya',
+  },
+  {
+    name: 'Timsales Nakuru',
+    role: 'Regional Office & Distribution',
+    address: 'Nakuru, Kenya',
+    phones: ['0758 875 072'],
+    email: 'nakuru@timsales.com',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Timsales%20Nakuru%2C%20Kenya',
   },
 ];
 
@@ -81,49 +73,49 @@ export interface ManufacturingStep {
 export const manufacturingSteps: ManufacturingStep[] = [
   {
     number: '01',
-    title: '1.1 PLYWOOD LINE',
+    title: 'PLYWOOD LINE',
     description: 'This line produces Plywood’s of various thicknesses. Plywood production entails: Debarking:Removal of barks from logs as it’s not used for making veneer. Steaming of logs: To soften logs for ease of peeling and to remove extractives that may interfere with the strength of glue. Peeling: To produce veneers. Drying: To reduce moisture content for proper spread of glue. Glue spreading: Involves assembly of core veneer and face veneer. Grading and sorting: Finished product is graded into three grades.',
     image: '/assets/images/about_us.jpg',
   },
   {
     number: '02',
-    title: '1.2 BLOCKBOARD LINE',
+    title: 'BLOCKBOARD LINE',
     description: 'Made up of solid strips of wood known as lumber core and veneers. Lumber core, core veneer and face veneer are assembled to produce block boards. The lumber core is assembled using a composer machine after being dried in a kiln drier. Lumber core is produced from multi ripsaw machine.',
     image: '/assets/images/blockboard.jpeg',
   },
   {
     number: '03',
-    title: '1.3 FLUSH DOOR LINE',
+    title: 'FLUSH DOOR LINE',
     description: 'This is the assembly of door frame, veneer-plywood honey comb and door skin to make a flush door. Flush doors are mainly for interior use.',
     image: '/assets/images/FLUSHDOOR1.jpg',
   },
   {
     number: '04',
-    title: '1.4 FIBRE BOARDS LINE',
+    title: 'FIBRE BOARDS LINE',
     description: 'Utilizes wastes from sawmill line (off-cuts) and plywood line which are chipped and then cooked in a digester to produce fibers which are pulped into hardboards and soft boards. Hardboards are dried through a hot press and have one smooth surface while softboards are dried through a drier and both surfaces are coarse.',
     image: '/assets/images/FIBREBOARDS.jpg',
   },
   {
     number: '05',
-    title: '1.5 SAWMILL LINE',
+    title: 'SAWMILL LINE',
     description: 'Logs are sawn into lumber/timber for use in construction and making of other secondary products e.g. block board flush door, furniture etc. Latest state of the art woodmizers machines are used and this leads to more recovery and less wastage. Saw dust and barks are used in the thermal boiler for energy generation.',
     image: '/assets/images/sawmill-line.jpg',
   },
   {
     number: '06',
-    title: '1.6 CHIPBOARD LINE',
+    title: 'CHIPBOARD LINE',
     description: 'The waste from sawmill and plywood line are chipped and used for production of chipboards. We produce chipboards in various thickness from 9mm to 25mm.The designed ceiling boards are also manufactured. We also laminate the boards in various colors as per the customer’s requirements.',
     image: '/assets/images/chipboardline.jpg',
   },
   {
     number: '07',
-    title: '1.7 TRANSMISSION POLE TREATMENT LINE',
+    title: 'TRANSMISSION POLE TREATMENT LINE',
     description: 'Manufactures power transmission poles which are supplied to Kenya Power Limited Company. Raw poles are dried in steam heated kiln drier and then treated in vacuum pressure impregnating vessel for chemical impregnation. Copper Chrome arsenate and creosote oil chemicals are used.',
     image: '/assets/images/cypress-quarter.jpeg',
   },
   {
     number: '08',
-    title: '1.8 PREFABRICATED HOUSES PRODUCTION LINE',
+    title: 'PREFABRICATED HOUSES PRODUCTION LINE',
     description: 'Sawn timber are dried in the drier the taken for molding to produce T&G with center groove. The materials are the assembled at the joinery section into panels of different parts of the house. The panels are joined on site to make a house.',
     image: '/assets/images/timber-yard.jpg',
   },

@@ -4,7 +4,6 @@ import PageHero from '@/components/ui/PageHero';
 // import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 import { products } from '@/data/products';
-import CTABanner from '@/components/sections/CTABanner';
 
 export default function Products() {
   return (
@@ -12,7 +11,7 @@ export default function Products() {
       <PageHero
         eyebrow="Products"
         title={<>Our Products</>}
-        description="Reliable wood products manufactured for construction, furniture, joinery, interiors and industrial applications. Explore Timsales plywood, fibreboards, chipboards, block boards, flush doors and timber."
+        description="Reliable wood products manufactured for construction, furniture, joinery, interiors and industrial applications. Explore Timsales plywood, fibreboards, chipboards, block boards, doors and timber."
         image="/assets/images/BLOCKBOARD.jpg"
       />
 
@@ -49,8 +48,6 @@ export default function Products() {
         </div>
 
       </section>
-
-      <CTABanner />
     </>
   );
 }

@@ -3,7 +3,6 @@ import PageHero from '@/components/ui/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 import { projects } from '@/data/content';
-import CTABanner from '@/components/sections/CTABanner';
 
 export default function Projects() {
   return (
@@ -64,8 +63,6 @@ export default function Projects() {
           </div>
         </Reveal>
       </section>
-
-      <CTABanner />
     </>
   );
 }

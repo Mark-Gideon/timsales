@@ -74,11 +74,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-warm-100/70 text-sm">
                 <Phone className="w-4 h-4 shrink-0 text-timber-500" />
-                <span>0722 203 919 / 0723 945 279</span>
+                <span>0722 205 919 / 0723 945 279</span>
               </li>
               <li className="flex items-center gap-3 text-warm-100/70 text-sm">
                 <Mail className="w-4 h-4 shrink-0 text-timber-500" />
-                <span>info@timsales.com</span>
+                <a href="mailto:Sales_elburgon@timsales.com" className="hover:text-timber-400 transition-colors break-all">Sales_elburgon@timsales.com</a>
               </li>
             </ul>
             <Link to="/contact" className="inline-flex items-center gap-2 mt-5 text-timber-400 hover:text-timber-300 text-sm font-semibold transition-colors">

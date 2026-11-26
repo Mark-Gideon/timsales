@@ -8,7 +8,7 @@ export interface Product {
   image: string;
   detailImage: string;
   applications: string[];
-  specs: { label: string; value: string }[];
+  gallery: { src: string; caption?: string }[];
 }
 
 export const products: Product[] = [
@@ -24,13 +24,10 @@ export const products: Product[] = [
     image: '/assets/images/plywood.jpg',
     detailImage: '/assets/images/marineplaywood.jpeg',
     applications: ['Construction', 'Furniture', 'Joinery', 'Interior Fit-Outs', 'Formwork', 'Packaging'],
-    specs: [
-      { label: 'Product', value: 'Plywood' },
-      { label: 'Dimensions', value: '[Add specification]' },
-      { label: 'Thickness', value: '[Add specification]' },
-      { label: 'Grade', value: '[Add specification]' },
-      { label: 'Finish', value: '[Add specification]' },
-      { label: 'Application', value: '[Add specification]' },
+    gallery: [
+      { src: '/assets/images/products/plywood/01.jpg' },
+      { src: '/assets/images/products/plywood/02.jpg' },
+      { src: '/assets/images/products/plywood/03.jpg' },
     ],
   },
   {
@@ -45,13 +42,11 @@ export const products: Product[] = [
     image: '/assets/images/FIBREBOARDS.jpg',
     detailImage: '/assets/images/FIBREBOARDS.jpg',
     applications: ['Furniture', 'Interior Fit-Outs', 'Joinery', 'Doors', 'Shelving', 'Display Systems'],
-    specs: [
-      { label: 'Product', value: 'Fibreboards' },
-      { label: 'Dimensions', value: '[Add specification]' },
-      { label: 'Thickness', value: '[Add specification]' },
-      { label: 'Grade', value: '[Add specification]' },
-      { label: 'Finish', value: '[Add specification]' },
-      { label: 'Application', value: '[Add specification]' },
+    gallery: [
+      { src: '/assets/images/products/fibreboards/01.jpg', caption: 'Hardboards' },
+      { src: '/assets/images/products/fibreboards/02.jpg', caption: 'Hardboards' },
+      { src: '/assets/images/products/fibreboards/03.jpg', caption: 'Softboards' },
+      { src: '/assets/images/products/fibreboards/04.jpg', caption: 'Softboards' },
     ],
   },
   {
@@ -66,13 +61,17 @@ export const products: Product[] = [
     image: '/assets/images/chipboard.jpg',
     detailImage: '/assets/images/chipboardline.jpg',
     applications: ['Furniture', 'Interior Fit-Outs', 'Ceiling Boards', 'Joinery', 'Shelving', 'Commercial Projects'],
-    specs: [
-      { label: 'Product', value: 'Chipboards' },
-      { label: 'Sheet Size', value: "8' x 4'" },
-      { label: 'Thickness', value: '9mm, 10mm, 12mm, 16mm, 18mm and 25mm' },
-      { label: 'Finish', value: 'Suede or matt; laminated colours available' },
-      { label: 'Material', value: 'Recovered sawmill and plywood-line residues' },
-      { label: 'Application', value: 'Furniture, interiors and ceiling boards' },
+    gallery: [
+      { src: '/assets/images/products/chipboards/01.jpg', caption: 'Ceiling Board' },
+      { src: '/assets/images/products/chipboards/02.jpg', caption: 'Chipboard Plain' },
+      { src: '/assets/images/products/chipboards/03.jpg', caption: 'Chipboard Plain' },
+      { src: '/assets/images/products/chipboards/04.jpg', caption: 'Laminated Chipboard – Various Colours' },
+      { src: '/assets/images/products/chipboards/05.jpg', caption: 'Laminated Chipboard' },
+      { src: '/assets/images/products/chipboards/06.jpg', caption: 'Laminated Chipboard' },
+      { src: '/assets/images/products/chipboards/07.jpg', caption: 'Laminated Chipboard' },
+      { src: '/assets/images/products/chipboards/08.jpg', caption: 'Laminated Chipboard' },
+      { src: '/assets/images/products/chipboards/09.jpg', caption: 'Laminated Chipboard' },
+      { src: '/assets/images/products/chipboards/10.jpg', caption: 'Laminated Chipboard' },
     ],
   },
   {
@@ -87,34 +86,33 @@ export const products: Product[] = [
     image: '/assets/images/blockboard.jpeg',
     detailImage: '/assets/images/BLOCKBOARD.jpg',
     applications: ['Furniture', 'Joinery', 'Doors', 'Shelving', 'Interior Fit-Outs', 'Commercial Projects'],
-    specs: [
-      { label: 'Product', value: 'Block Boards' },
-      { label: 'Dimensions', value: '[Add specification]' },
-      { label: 'Thickness', value: '[Add specification]' },
-      { label: 'Grade', value: '[Add specification]' },
-      { label: 'Finish', value: '[Add specification]' },
-      { label: 'Application', value: '[Add specification]' },
+    gallery: [
+      { src: '/assets/images/products/block-boards/01.jpg' },
+      { src: '/assets/images/products/block-boards/02.jpg' },
+      { src: '/assets/images/products/block-boards/03.jpg' },
     ],
   },
   {
-    slug: 'flush-doors',
-    name: 'Flush Doors',
-    shortName: 'Flush Doors',
+    slug: 'doors',
+    name: 'Doors',
+    shortName: 'Doors',
     tagline: 'Reliable, durable door solutions',
     description:
       'Reliable, durable door solutions for residential, commercial and institutional applications.',
     overview:
-      'Timsales flush doors are manufactured with a solid core and quality veneer or laminate faces, engineered for durability, dimensional stability and consistent performance. They are designed for residential, commercial and institutional applications where reliability and appearance matter.',
+      'Timsales doors are manufactured with a solid core and quality veneer or laminate faces, engineered for durability, dimensional stability and consistent performance. They are designed for residential, commercial and institutional applications where reliability and appearance matter.',
     image: '/assets/images/FLUSHDOOR1.jpg',
     detailImage: '/assets/images/FLUSHDOOR2.jpg',
     applications: ['Doors', 'Residential', 'Commercial', 'Institutional', 'Interior Fit-Outs', 'Hospitality'],
-    specs: [
-      { label: 'Product', value: 'Flush Doors' },
-      { label: 'Dimensions', value: '[Add specification]' },
-      { label: 'Thickness', value: '[Add specification]' },
-      { label: 'Grade', value: '[Add specification]' },
-      { label: 'Finish', value: '[Add specification]' },
-      { label: 'Application', value: '[Add specification]' },
+    gallery: [
+      { src: '/assets/images/products/doors/01.jpg', caption: 'Flush Door' },
+      { src: '/assets/images/products/doors/02.jpg', caption: 'Flush Door' },
+      { src: '/assets/images/products/doors/03.jpg', caption: 'Mahogany Door' },
+      { src: '/assets/images/products/doors/04.jpg', caption: 'Mahogany Door' },
+      { src: '/assets/images/products/doors/05.jpg', caption: 'Mahogany Door' },
+      { src: '/assets/images/products/doors/06.jpg', caption: 'Batten Door' },
+      { src: '/assets/images/products/doors/07.jpg', caption: 'Flush Doors' },
+      { src: '/assets/images/products/doors/08.jpg', caption: 'Flush Doors' },
     ],
   },
   {
@@ -126,16 +124,17 @@ export const products: Product[] = [
       'Quality timber products for construction, furniture, joinery and general woodworking applications.',
     overview:
       'Timsales timber is sourced, processed and graded for quality and consistency. Our sawmilling operations produce a range of timber dimensions suitable for construction, furniture, joinery and general woodworking — each piece processed to meet professional standards.',
-    image: '/assets/images/Sawn-timber.jpeg',
-    detailImage: '/assets/images/timber-yard.jpg',
+    image: '/assets/images/products/timber/card.jpg',
+    detailImage: '/assets/images/products/timber/04.jpg',
     applications: ['Construction', 'Furniture', 'Joinery', 'Roofing', 'Flooring', 'General Woodworking'],
-    specs: [
-      { label: 'Product', value: 'Timber' },
-      { label: 'Dimensions', value: '[Add specification]' },
-      { label: 'Thickness', value: '[Add specification]' },
-      { label: 'Grade', value: '[Add specification]' },
-      { label: 'Finish', value: '[Add specification]' },
-      { label: 'Application', value: '[Add specification]' },
+    gallery: [
+      { src: '/assets/images/products/timber/01.jpg', caption: 'Kiln Dried Timber' },
+      { src: '/assets/images/products/timber/02.jpg', caption: 'Kiln Dried Timber' },
+      { src: '/assets/images/products/timber/03.jpg', caption: 'Kiln Dried Treated Timber' },
+      { src: '/assets/images/products/timber/04.jpg', caption: 'Sawn Timber' },
+      { src: '/assets/images/products/timber/05.jpg', caption: 'Sawn Timber' },
+      { src: '/assets/images/products/timber/06.jpg', caption: 'Sawn Timber' },
+      { src: '/assets/images/products/timber/07.jpg', caption: 'Sawn Timber' },
     ],
   },
   {
@@ -147,14 +146,16 @@ export const products: Product[] = [
       'Treated timber poles prepared for power transmission and utility infrastructure applications.',
     overview:
       'Timsales transmission poles are dried and treated through a controlled vacuum-pressure impregnation process to improve durability for utility infrastructure. The treatment line uses preservative systems suited to long-term outdoor service.',
-    image: '/assets/images/Cypress quarter round 1.jpeg',
-    detailImage: '/assets/images/Cypress timber.jpeg',
+    image: '/assets/images/products/transmission-poles/01.jpg',
+    detailImage: '/assets/images/products/transmission-poles/02.jpg',
     applications: ['Power Distribution', 'Utility Infrastructure', 'Outdoor Construction', 'Fencing'],
-    specs: [
-      { label: 'Product', value: 'Transmission Poles' },
-      { label: 'Treatment', value: 'Vacuum-pressure impregnation' },
-      { label: 'Material', value: 'Cypress timber' },
-      { label: 'Application', value: 'Power transmission and utility infrastructure' },
+    gallery: [
+      { src: '/assets/images/products/transmission-poles/01.jpg', caption: 'Transmission Poles' },
+      { src: '/assets/images/products/transmission-poles/02.jpg', caption: 'Transmission Poles' },
+      { src: '/assets/images/products/transmission-poles/03.jpg', caption: 'Raw Transmission Poles' },
+      { src: '/assets/images/products/transmission-poles/04.jpg', caption: 'Treated Transmission Poles' },
+      { src: '/assets/images/products/transmission-poles/05.jpg', caption: 'Transmission Poles' },
+      { src: '/assets/images/products/transmission-poles/06.jpg', caption: 'Transmission Poles' },
     ],
   },
   {
@@ -165,15 +166,16 @@ export const products: Product[] = [
     description:
       'Factory-prepared timber panels and components assembled into efficient prefabricated buildings.',
     overview:
-      'Timsales prefabricated building systems use kiln-dried and moulded timber components assembled into panels for efficient site installation. The system supports practical timber buildings with consistent factory preparation and joinery.',
-    image: '/assets/images/img1.jpg',
-    detailImage: '/assets/images/img2.jpg',
+      'We provide quality fabricated building structures that are affordable, modern, and quick to install. Our structures can be customized to suit different business needs, with practical designs, durable materials, and comfortable spaces.',
+    image: '/assets/images/products/prefabricated-buildings/01.jpg',
+    detailImage: '/assets/images/products/prefabricated-buildings/02.jpg',
     applications: ['Residential Buildings', 'Site Offices', 'Commercial Spaces', 'Panelized Construction'],
-    specs: [
-      { label: 'Product', value: 'Prefabricated Buildings' },
-      { label: 'Construction', value: 'Factory-prepared timber panels' },
-      { label: 'Assembly', value: 'Panelized on-site installation' },
-      { label: 'Application', value: 'Residential and commercial buildings' },
+    gallery: [
+      { src: '/assets/images/products/prefabricated-buildings/01.jpg' },
+      { src: '/assets/images/products/prefabricated-buildings/02.jpg' },
+      { src: '/assets/images/products/prefabricated-buildings/03.jpg' },
+      { src: '/assets/images/products/prefabricated-buildings/04.jpg' },
+      { src: '/assets/images/products/prefabricated-buildings/05.jpg' },
     ],
   },
 ];

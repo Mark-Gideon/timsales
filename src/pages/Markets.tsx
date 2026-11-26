@@ -3,7 +3,17 @@ import { ArrowRight, MapPin, Globe, Truck } from 'lucide-react';
 import PageHero from '@/components/ui/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
-import CTABanner from '@/components/sections/CTABanner';
+import ImageCarousel from '@/components/ui/ImageCarousel';
+
+const marketGallery = [
+  { src: '/assets/images/products/markets/02.jpg', caption: 'Timsales lorries loaded with transmission poles' },
+  { src: '/assets/images/products/markets/03.jpg', caption: 'Timsales fleet on the road' },
+  { src: '/assets/images/products/markets/04.jpg', caption: 'Timsales lorries loaded with transmission poles' },
+  { src: '/assets/images/products/markets/05.jpg', caption: 'Poles loaded for transportation' },
+  { src: '/assets/images/products/markets/06.jpg', caption: 'Poles loaded for transportation' },
+  { src: '/assets/images/products/markets/07.jpg', caption: 'Transmission poles being transported' },
+  { src: '/assets/images/products/markets/08.jpg', caption: 'Transmission poles being transported' },
+];
 
 export default function Markets() {
   return (
@@ -12,7 +22,7 @@ export default function Markets() {
         eyebrow="Markets"
         title={<>Made in Kenya. Built for the Region.</>}
         description="Timsales products serve customers locally across Kenya and are also supplied to neighboring markets. Our manufacturing base positions us for both domestic supply and growing export opportunities."
-        image="/assets/images/lorry.jpg"
+        image="/assets/images/products/markets/01.jpg"
       />
 
       <section className="bg-warm-50 section-padding py-20 lg:py-32">
@@ -44,6 +54,24 @@ export default function Markets() {
             );
           })}
         </div>
+
+        <div className="mt-20">
+          <SectionHeading
+            eyebrow="On the Move"
+            title={<>Timsales Products on the Road</>}
+            description="Our lorries and tractors carry Timsales products from our manufacturing base to customers across the country and the region."
+            align="center"
+          />
+          <Reveal delay={2}>
+            <ImageCarousel
+              className="mt-12"
+              images={marketGallery}
+              slideClassName="w-[85%] sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]"
+              aspectClassName="aspect-[4/3]"
+              autoPlayMs={3500}
+            />
+          </Reveal>
+        </div>
       </section>
 
       <section className="bg-forest-950 section-padding py-20 lg:py-32 relative overflow-hidden">
@@ -67,8 +95,6 @@ export default function Markets() {
           </Reveal>
         </div>
       </section>
-
-      <CTABanner />
     </>
   );
 }

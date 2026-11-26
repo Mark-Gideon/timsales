@@ -2,7 +2,6 @@ import PageHero from '@/components/ui/PageHero';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 import { manufacturingSteps } from '@/data/content';
-import CTABanner from '@/components/sections/CTABanner';
 
 export default function About() {
   return (
@@ -26,9 +25,6 @@ export default function About() {
               <div className="mt-8 space-y-4">
                 {[
                   'Raw materials are sourced from state forest managed by the Kenya Forest Service through payment of stipulated royalty with the exception of raw transmission poles which are obtained from small holder and large private farms and tea estates.',
-                  'Mr. Jaswant Singh Rai - Chairman',
-                  'Mr. Onkar Singh Rai - Managing Director',
-                  'Mr. Tejveer Singh Rai - Director',
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-timber-500 shrink-0" />
@@ -75,8 +71,6 @@ export default function About() {
           ))}
         </div>
       </section>
-
-      <CTABanner />
     </>
   );
 }
