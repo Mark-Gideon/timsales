@@ -13,6 +13,9 @@ const marketGallery = [
   { src: '/assets/images/products/markets/06.jpg', caption: 'Poles loaded for transportation' },
   { src: '/assets/images/products/markets/07.jpg', caption: 'Transmission poles being transported' },
   { src: '/assets/images/products/markets/08.jpg', caption: 'Transmission poles being transported' },
+  { src: '/assets/images/products/markets/09.jpg', caption: 'Timsales delivery fleet' },
+  { src: '/assets/images/products/markets/10.jpg', caption: 'Timsales delivery fleet' },
+  { src: '/assets/images/products/markets/11.jpg', caption: 'Timsales delivery fleet' },
 ];
 
 export default function Markets() {

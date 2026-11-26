@@ -9,6 +9,7 @@ export interface Product {
   detailImage: string;
   applications: string[];
   gallery: { src: string; caption?: string }[];
+  categories?: { name: string; description: string; images: { src: string; caption?: string }[] }[];
 }
 
 export const products: Product[] = [
@@ -114,6 +115,30 @@ export const products: Product[] = [
       { src: '/assets/images/products/doors/07.jpg', caption: 'Flush Doors' },
       { src: '/assets/images/products/doors/08.jpg', caption: 'Flush Doors' },
     ],
+    categories: [
+      {
+        name: 'Flush Doors',
+        description: 'Our Flush doors are strong, durable, and suitable for offices, homes, and commercial buildings.',
+        images: [
+          { src: '/assets/images/products/doors/flush-1.jpg', caption: 'Flush Doors' },
+          { src: '/assets/images/products/doors/flush-2.jpg', caption: 'Flush Doors' },
+          { src: '/assets/images/products/doors/flush-3.jpg', caption: 'Flush Doors' },
+          { src: '/assets/images/products/doors/flush-4.jpg', caption: 'Flush Doors' },
+        ],
+      },
+      {
+        name: 'Solid Doors',
+        description: 'We provide strong and durable solid doors designed for security, privacy, and long-lasting use. They can be customized to meet different sizes and design requirements.',
+        images: [
+          { src: '/assets/images/products/doors/solid-1.jpg', caption: 'Solid Doors' },
+          { src: '/assets/images/products/doors/solid-2.jpg', caption: 'Solid Doors' },
+          { src: '/assets/images/products/doors/solid-3.jpg', caption: 'Solid Doors' },
+          { src: '/assets/images/products/doors/solid-4.jpg', caption: 'Solid Doors' },
+          { src: '/assets/images/products/doors/solid-5.jpg', caption: 'Solid Doors' },
+          { src: '/assets/images/products/doors/solid-6.jpg', caption: 'Solid Doors' },
+        ],
+      },
+    ],
   },
   {
     slug: 'timber',
@@ -156,6 +181,9 @@ export const products: Product[] = [
       { src: '/assets/images/products/transmission-poles/04.jpg', caption: 'Treated Transmission Poles' },
       { src: '/assets/images/products/transmission-poles/05.jpg', caption: 'Transmission Poles' },
       { src: '/assets/images/products/transmission-poles/06.jpg', caption: 'Transmission Poles' },
+      { src: '/assets/images/products/transmission-poles/07.jpg', caption: 'Fencing Poles' },
+      { src: '/assets/images/products/transmission-poles/08.jpg', caption: 'Fencing Poles' },
+      { src: '/assets/images/products/transmission-poles/09.jpg', caption: 'Fencing Poles' },
     ],
   },
   {
@@ -176,6 +204,31 @@ export const products: Product[] = [
       { src: '/assets/images/products/prefabricated-buildings/03.jpg' },
       { src: '/assets/images/products/prefabricated-buildings/04.jpg' },
       { src: '/assets/images/products/prefabricated-buildings/05.jpg' },
+    ],
+  },
+  {
+    slug: 'husqvarna',
+    name: 'Husqvarna',
+    shortName: 'Husqvarna',
+    tagline: 'Outdoor power equipment',
+    description: 'Husqvarna equipment known for its quality, power and reliability.',
+    overview:
+      'From chainsaws and lawn mowers to brush cutters and other garden maintenance tools, Husqvarna products are designed to deliver excellent performance and long lasting service. Ideal for both home and professional use, these products provide efficient solutions for landscaping, gardening and outdoor maintenance',
+    image: '/assets/images/products/husqvarna/01.jpg',
+    detailImage: '/assets/images/products/husqvarna/02.jpg',
+    applications: ['Landscaping', 'Gardening', 'Outdoor Maintenance'],
+    gallery: [
+      { src: '/assets/images/products/husqvarna/01.jpg', caption: 'Husqvarna 585' },
+      { src: '/assets/images/products/husqvarna/02.jpg', caption: 'Husqvarna 272' },
+      { src: '/assets/images/products/husqvarna/03.jpg', caption: 'Husqvarna 385' },
+      { src: '/assets/images/products/husqvarna/04.jpg', caption: 'Chain Saws, Blowers & Manual Lawn Mower' },
+      { src: '/assets/images/products/husqvarna/05.jpg', caption: 'Brush Cutters' },
+      { src: '/assets/images/products/husqvarna/06.jpg', caption: 'Lawn Mower' },
+      { src: '/assets/images/products/husqvarna/07.jpg', caption: 'Robotic Auto Mower' },
+      { src: '/assets/images/products/husqvarna/08.jpg', caption: 'Tillers' },
+      { src: '/assets/images/products/husqvarna/09.jpg', caption: 'Sprayers & Water Pump' },
+      { src: '/assets/images/products/husqvarna/10.jpg', caption: 'Water Pumps' },
+      { src: '/assets/images/products/husqvarna/11.jpg', caption: 'Machine Spares' },
     ],
   },
 ];

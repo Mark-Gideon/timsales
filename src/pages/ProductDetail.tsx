@@ -31,6 +31,9 @@ export default function ProductDetail() {
     'General Woodworking': 'Hammer',
     'Commercial Projects': 'Building',
     'Interior Fit-Out': 'Home',
+    Landscaping: 'Trees',
+    Gardening: 'Sprout',
+    'Outdoor Maintenance': 'Wrench',
   };
 
   return (
@@ -83,6 +86,41 @@ export default function ProductDetail() {
           </div>
         </div>
       </section>
+
+      {product.categories?.map((cat, ci) => (
+        <section
+          key={cat.name}
+          className={`${ci % 2 === 0 ? 'bg-warm-100' : 'bg-warm-50'} section-padding py-20 lg:py-24`}
+        >
+          <Reveal>
+            <h2 className="text-display-sm font-extrabold text-forest-900 uppercase">{cat.name}</h2>
+          </Reveal>
+          <Reveal delay={1}>
+            <p className="mt-4 text-lg text-charcoal-700 leading-relaxed max-w-3xl">{cat.description}</p>
+          </Reveal>
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            {cat.images.map((img, i) => (
+              <Reveal key={img.src} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
+                <figure className="bg-white rounded-xl border border-charcoal-200/40 overflow-hidden card-hover h-full">
+                  <div className="aspect-[3/5] overflow-hidden bg-warm-100">
+                    <img
+                      src={img.src}
+                      alt={`${cat.name} ${i + 1}`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  {img.caption && (
+                    <figcaption className="px-4 py-3 text-center text-sm font-bold text-forest-900">
+                      {img.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      ))}
 
       <section className="bg-warm-100 section-padding py-20 lg:py-28">
         <Reveal>

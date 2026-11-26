@@ -87,7 +87,7 @@ export const manufacturingSteps: ManufacturingStep[] = [
     number: '03',
     title: 'FLUSH DOOR LINE',
     description: 'This is the assembly of door frame, veneer-plywood honey comb and door skin to make a flush door. Flush doors are mainly for interior use.',
-    image: '/assets/images/FLUSHDOOR1.jpg',
+    image: '/assets/images/door-full.jpg',
   },
   {
     number: '04',

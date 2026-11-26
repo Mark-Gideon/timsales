@@ -44,6 +44,15 @@ const samples = [
   { name: 'Husqvarna Outdoor Tools', image: 'husqvarna-outdoor-tools' },
 ];
 
+const moreSamples = [
+  { name: 'Doors', image: 'doors-display' },
+  { name: 'Kitchen & Living Furniture', image: 'kitchen-living-furniture' },
+  { name: 'Bedroom & Office Furniture', image: 'bedroom-office-furniture' },
+  { name: 'Bed Sets', image: 'bed-sets' },
+  { name: 'Dining Furniture', image: 'dining-furniture' },
+  { name: 'Showroom Furniture', image: 'showroom-furniture' },
+];
+
 export default function Products() {
   return (
     <>
@@ -143,6 +152,23 @@ export default function Products() {
             <Reveal key={item.image} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
               <figure className="bg-white rounded-xl border border-charcoal-200/40 overflow-hidden card-hover h-full">
                 <div className="aspect-[4/5] overflow-hidden image-zoom">
+                  <img
+                    src={`/assets/images/samples/${item.image}.jpg`}
+                    alt={item.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="px-4 py-4 text-center text-sm font-bold text-forest-900">
+                  {item.name}
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+          {moreSamples.map((item, i) => (
+            <Reveal key={item.image} delay={((i % 2) + 1) as 1 | 2} className="col-span-2">
+              <figure className="bg-white rounded-xl border border-charcoal-200/40 overflow-hidden card-hover h-full">
+                <div className="aspect-[16/10] overflow-hidden image-zoom">
                   <img
                     src={`/assets/images/samples/${item.image}.jpg`}
                     alt={item.name}
